@@ -61,7 +61,7 @@ As mentioned earlier, during LLM prompting for the evaluation of the Likert scal
 | XGBoost Likert + 16-shot             | ==$0.99$==           | $0.44$              |
 | Logistic Regression Likert           | $0.91$               | $0.44$              |
 | Logistic Regression Likert + 16-shot | $0.94$               | $0.4$               |
-| Baseline: Logistic Regression no LLM | $0.47$               | $0.27$              |
+| **Baseline**: Logistic Regression no LLM | $0.47$               | $0.27$              |
 
 
 
