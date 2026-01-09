@@ -61,7 +61,9 @@ As mentioned earlier, during LLM prompting for the evaluation of the Likert scal
 | XGBoost Likert + 16-shot             | ==$0.99$==           | $0.44$              |
 | Logistic Regression Likert           | $0.91$               | $0.44$              |
 | Logistic Regression Likert + 16-shot | $0.94$               | $0.4$               |
-\n
+
+
+
 
  Overall XGBoost Likert + 16-shot had the best training performance and a respectable testing performance. I suspect our small sample size to be the driving force behind why the accuracy is low.
 ## Future Directions
