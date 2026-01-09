@@ -68,7 +68,7 @@ For the Likert Scale items generated in (2) and evaluated in (3), zero-shot prom
 
  Overall XGBoost Likert + 16-shot had the best training performance and a respectable testing performance. I suspect our small sample size to be the driving force behind why the accuracy is low.
 ## Future Directions
-- Employ classical semantic analysis techniques such as word2vec for feature extraction, and compare the results
+- Employ additional baselines through classical semantic analysis techniques such as word2vec for feature extraction, and compare the results
 - Preprocessing the Likert scale questions, using dimension reduction techniques such as factor analysis or models from item response theory
 - Expand the size of our dataset to be more robust to out-of-sample medical transcripts to improve predictive accuracy
 - Explore feature importance of Likert Questions through SHAP values to determine how the LLM questionnaire could be tailored
