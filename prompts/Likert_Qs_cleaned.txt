@@ -1,0 +1,33 @@
+1. On a scale from one to five, how likely is it that the patient is undergoing a surgical procedure involving invasive techniques?
+2. On a scale from one to five, how frequently do the medical terms in the transcription relate to incision or operative techniques?
+3. On a scale from one to five, how relevant are the keywords "surgery," "operation," or "postoperative care" to this transcript?
+4. On a scale from one to five, how often is a detailed patient history and physical examination described in the transcription?
+5. On a scale from one to five, how likely is it that the medical transcript includes patient consultation with a focus on diagnosis and physical examination?
+6. On a scale from one to five, how frequently do terms related to heart or lung function (e.g., "cardiac," "pulmonary," "respiratory") appear in the transcription?
+7. On a scale from one to five, how likely is it that the transcription includes a focus on cardiovascular or pulmonary diseases or disorders?
+8. On a scale from one to five, how likely is it that the transcription involves musculoskeletal issues or bone-related injuries?
+9. On a scale from one to five, how often do keywords like "fracture," "joint," "bone," or "orthopedic" appear in the transcription?
+10. On a scale from one to five, how likely is it that the transcription describes general clinical care and diagnosis across a broad range of symptoms or conditions?
+11. On a scale from one to five, how often is the primary focus on non-specialized medicine or internal health conditions?
+12. On a scale from one to five, how likely is it that the transcription involves diseases or conditions related to the urinary system or male reproductive system?
+13. On a scale from one to five, how frequently are terms like "urinary," "kidney," "bladder," or "prostate" mentioned in the transcription?
+14. On a scale from one to five, how likely is it that the transcription involves the interpretation of imaging results (e.g., X-rays, CT scans, MRIs)?
+15. On a scale from one to five, how often are terms related to radiological procedures or imaging technology mentioned?
+16. On a scale from one to five, how likely is it that the transcription describes pregnancy, childbirth, or gynecological issues?
+17. On a scale from one to five, how often do terms like "obstetrics," "gynecology," "labor," or "fetal" appear in the transcription?
+18. On a scale from one to five, how likely is it that the transcription discusses neurological conditions such as epilepsy, headaches, or seizures?
+19. On a scale from one to five, how frequently are terms like "neurology," "seizure," "headache," or "nervous system" used in the transcription?
+20. On a scale from one to five, how likely is it that the transcription follows a structured SOAP (Subjective, Objective, Assessment, Plan) format or focuses on patient progress notes?
+21. On a scale from one to five, how frequently does the transcription include updates on the patient's progress or condition during treatment?
+22. On a scale from one to five, how likely is it that the transcription involves surgical interventions related to the brain, spinal cord, or nervous system?
+23. On a scale from one to five, how often do terms like "neurosurgery," "spinal," "cranial," or "brain surgery" appear in the transcription?
+24. On a scale from one to five, how likely is it that the transcription deals with diseases related to the digestive system, such as the stomach, liver, or intestines?
+25. On a scale from one to five, how often are terms like "gastrointestinal," "liver," "stomach," or "endoscopy" mentioned in the transcription?
+26. On a scale from one to five, how likely is it that the transcription involves the diagnosis or treatment of eye-related conditions?
+27. On a scale from one to five, how often are terms like "ophthalmology," "retina," "vision," or "ocular" used in the transcription?
+28. On a scale from one to five, how likely is it that the transcription involves kidney-related diseases or disorders?
+29. On a scale from one to five, how often are terms like "renal," "kidney," or "dialysis" mentioned in the transcription?
+30. On a scale from one to five, how likely is it that the transcription describes an office visit with a focus on outpatient care?
+31. On a scale from one to five, how often do terms like "clinic," "consultation," or "office visit" appear in the transcription?
+32. On a scale from one to five, how likely is it that the transcription involves conditions related to the ear, nose, or throat?
+33. On a scale from one to five, how frequently are terms like "otolaryngology," "ENT," "sinus," or "throat" mentioned in the transcription?
