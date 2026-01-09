@@ -12,9 +12,9 @@ We make three LLM Queries to extract features from these transcripts:
 
 We are interested in determining the "best" way to classify different medical transcripts into medical specialties. We will compare the following classification approaches
 1) 16-shotting the LLM for classification as in LLM query (1)
-2) Using the LLM Likert scale responses to implement an xgboost algorithm
+2) Using the LLM Likert scale responses to implement an XGBoost algorithm
 3) Using the LLM Likert scale responses to implement a multiclass logistic regression
-4) Using both the LLM classification from (1) and the LLM Likert scale responses to implement xgboost
+4) Using both the LLM classification from (1) and the LLM Likert scale responses to implement XGBoost
 5) Using both the LLM classification from (1) and the LLM Likert scale responses to implement a multiclass logistic regression
 
 We initially explored the first LLM query being three-shot, however we found it to give an terrible predictive performance (accuracy of $9\%$) so we elected to use the 16-shot version.
