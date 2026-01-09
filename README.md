@@ -17,13 +17,13 @@ We are interested in determining the "best" way to classify different medical tr
 4) Using both the LLM classification from (1) and the LLM Likert scale responses to implement XGBoost
 5) Using both the LLM classification from (1) and the LLM Likert scale responses to implement a multiclass logistic regression
 
-We initially explored the first LLM query being three-shot, however we found it to give an terrible predictive performance (accuracy of $9\%$) so we elected to use the 16-shot version.
+We initially explored the first LLM query being three-shot, however we found it to give an terrible predictive performance (accuracy of 9%) so we elected to use the 16-shot version.
 
 The original source data, spanning $n=4999$ rows, has $40$ unique medical specialties. To avoid paying for credits on HuggingFace, I chose to reduce this dataset to $n=178$ observations. This was done by randomly selecting $200$ observations to keep, and then removing all observations whose medical specialty occurred $2$ or fewer times in the dataset, as presumably there is not enough information available to properly classify these. Even after this pruning, since there are many specialties with very few ($<10$) observations, we perform a train-test $75-25$ split stratified on the medical specialty, to ensure all available medical specialties are represented in the training dataset. The test-training split is only relevant for LLM prompt (2), for the other prompts they were run for every medical transcript individually.
 
 For each approach, we will evaluate performance on both the training and testing data using the classical categorical evaluation metrics as produced by the `sklearn` package (Accuracy, Precision, Recall, and F1-score). 
 
-**Results**: Based on the above metrics, we found XGBoost with the Likert Questionnaire responses and 16-shot LLM classifications and confidence levels to be the most consistent based on accuracy on in and out of sample. The 16-shot LLM to perform the best on predictive accuracy with an accuracy of $46.6\%$, but in-training had the low accuracy of $71\%$, which is even worse when you consider how $16$ shots is over $10\%$ of our sample size. Logistic regression also performed reasonably well, but was outclassed in-sample by XGBoost.
+**Results**: Based on the above metrics, we found XGBoost with the Likert Questionnaire responses and 16-shot LLM classifications and confidence levels to be the most consistent based on accuracy on in and out of sample. The 16-shot LLM to perform the best on predictive accuracy with an accuracy of 46.6%, but in-training had the relatively low accuracy of 71%, which is even worse when you consider how $16$ shots is over $10\%$ of our sample size. Logistic regression also performed reasonably well, but was outclassed in-sample by XGBoost.
 
 Surprisingly, including the LLM classifications as a feature for logistic regression along with the Likert questionnaire degraded performance as compared to just the Likert questionnaire.
 
