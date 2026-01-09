@@ -23,7 +23,7 @@ The original source data, spanning $n=4999$ rows, has $40$ unique medical specia
 
 For each approach, we will evaluate performance on both the training and testing data using the classical categorical evaluation metrics as produced by the `sklearn` package (Accuracy, Precision, Recall, and F1-score). 
 
-**Results**: Based on the above metrics, we found XGBoost with the Likert Questionnaire responses and 16-shot LLM classifications and confidence levels to be the most consistent based on accuracy on in and out of sample. The 16-shot LLM to perform the best on predictive accuracy with an accuracy of 46.6%, but in-training had the relatively low accuracy of 71%, which is even worse when you consider how $16$ shots is over $10\%$ of our sample size. Logistic regression also performed reasonably well, but was outclassed in-sample by XGBoost.
+**Results**: Based on the above metrics, we found XGBoost with the Likert Questionnaire responses and 16-shot LLM classifications and confidence levels to be the most consistent based on accuracy on in and out of sample. The 16-shot LLM to perform the best on predictive accuracy with an accuracy of 46.6%, but in-training had the relatively low accuracy of 71%, which is even worse when you consider how $16$ shots is over $10\%$ of our sample size. Logistic regression also performed reasonably well, but was outclassed in-sample by XGBoost. In the testing set, we outperformed a benchmark using ([logistic regression with vectorized features]([url](https://www.kaggle.com/code/bchnhtnguyn/ai-for-medical-transcriptions-dataset))) by over 60%.
 
 Surprisingly, including the LLM classifications as a feature for logistic regression along with the Likert questionnaire degraded performance as compared to just the Likert questionnaire.
 
@@ -61,6 +61,7 @@ As mentioned earlier, during LLM prompting for the evaluation of the Likert scal
 | XGBoost Likert + 16-shot             | ==$0.99$==           | $0.44$              |
 | Logistic Regression Likert           | $0.91$               | $0.44$              |
 | Logistic Regression Likert + 16-shot | $0.94$               | $0.4$               |
+| Baseline: Logistic Regression no LLM | $0.47$               | $0.27$              |
 
 
 
@@ -70,3 +71,4 @@ As mentioned earlier, during LLM prompting for the evaluation of the Likert scal
 - Employ classical semantic analysis techniques such as word2vec for feature extraction, and compare the results
 - Preprocessing the Likert scale questions, using dimension reduction techniques such as factor analysis or models from item response theory
 - Expand the size of our dataset to be more robust to out-of-sample medical transcripts to improve predictive accuracy
+- Explore feature importance of Likert Questions through SHAP values to determine how the LLM questionnaire could be tailored
