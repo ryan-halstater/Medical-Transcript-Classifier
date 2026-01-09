@@ -19,7 +19,7 @@ We are interested in determining the "best" way to classify different medical tr
 
 We initially explored the first LLM query being three-shot, however we found it to give an terrible predictive performance (accuracy of 9%) so we elected to use the 16-shot version.
 
-The original source data, spanning $n=4999$ rows, has $40$ unique medical specialties. To avoid paying for credits on HuggingFace, I chose to reduce this dataset to $n=178$ observations. This was done by randomly selecting $200$ observations to keep, and then removing all observations whose medical specialty occurred $2$ or fewer times in the dataset, as presumably there is not enough information available to properly classify these. This resulted in a dataset of size $n=178$. Even after this pruning, since there are many specialties with very few ($<10$) observations, we perform a train-test $75-25$ split stratified on the medical specialty, to ensure all available medical specialties are represented in the training dataset. The test-training split is only relevant for LLM prompt (2), for the other prompts they were run for every medical transcript individually.
+The original source data, spanning $n=4999$ rows, has $40$ unique medical specialties. To avoid paying for credits on HuggingFace, I chose to reduce this dataset to $n=178$ observations. This was done by randomly selecting $200$ observations to keep, and then removing all observations whose medical specialty occurred $2$ or fewer times in the dataset, as presumably there is not enough information available to properly classify these. Even after this pruning, since there are many specialties with very few ($<10$) observations, we perform a train-test $75-25$ split stratified on the medical specialty, to ensure all available medical specialties are represented in the training dataset. The test-training split is only relevant for LLM prompt (2), for the other prompts they were run for every medical transcript individually.
 
 For each approach, we will evaluate performance on both the training and testing data using the classical categorical evaluation metrics as produced by the `sklearn` package (Accuracy, Precision, Recall, and F1-score). 
 
@@ -40,6 +40,8 @@ For the approaches using Likert scale variables, we first subtract $3$ from all 
 XGBoost's hyperparameters were determined by Cross-Validation on the training data accuracy score. We elected not to tune the hyperparameters of the penalized logistic regression as implemented by `sklearn`, as there were many medical specialty categories with few observations, so depending on the fold not all categories are fairly represented.
 
 The metrics used for model comparison were all implemented in the `sklearn` Python package, and included the F1-score, precision, and recall.
+
+The baseline model was implemented was a multiclass logistic regression model creating features from the text using `sklearn`'s `TfidfVectorizer`. The idea and coding structure was originally sourced from this [Kaggle project]([url](https://www.kaggle.com/code/bchnhtnguyn/ai-for-medical-transcriptions-dataset)).
 
 All prompts are available in the `prompts` folder, stored as word files. The 16-shot prompt was generated programmatically with one shot for each of the sixteen possible classifications. The code used to produce the results shown below are in `LLM_and_models.ipynb`, the $3$-shot versions are in `LLM_and_models_depreciated_three_shot.ipynb`.
 
