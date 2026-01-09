@@ -1,7 +1,7 @@
 # Medical-Transcript-Classifier
 Medical data classifier using LLMs for feature generation and XGBoost for classification
 
-**Scenario**: Working in IT at a large hospital, you find a storage closet full of [medical transcript notes](https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions?resource=download). Some are labeled with the relevant medical specialty, some are not. You wish to label the medical transcripts with the correct specialty, from a list of the known possible medical specialties.
+**Scenario**: Working in IT at a large hospital, you find a storage closet full of [medical transcript notes](https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions?resource=download) (from Kaggle). Some are labeled with the relevant medical specialty, some are not. You wish to label the medical transcripts with the correct specialty, from a list of the known possible medical specialties.
 
 We will try five different approaches based around using an LLM for feature extraction, and then performing some (or no) machine learning or statistical post-processing to output a classification
 
